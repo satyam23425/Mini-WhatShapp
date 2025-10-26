@@ -1,0 +1,128 @@
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: #e5ddd5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  text-align: center;
+  color: #075e54;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  letter-spacing: 0.5px;
+}
+
+.chat-container {
+  width: 95%;
+  max-width: 600px;
+  padding: 15px;
+}
+
+.chat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+  padding: 15px;
+  background-color: #ffffff; 
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.chat:hover {
+  transform: translateY(-2px);
+}
+
+.from p,
+.to p {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+  font-size: 0.95em;
+  line-height: 1.3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 4px 0;
+}
+
+.from p {
+  background-color: #dcf8c6;
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+}
+
+.to p {
+  background-color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 3px;
+}
+
+.created_at {
+  font-size: 0.75em;
+  color: #888;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+button {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: #20b858;
+  transform: scale(1.05);
+}
+
+.delete button {
+  background-color: #f44336;
+}
+
+.delete button:hover {
+  background-color: #d32f2f;
+}
+
+.message form,
+.delete form {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.message,
+.delete {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+form[action="/chats/new"] button {
+  display: block;
+  margin: 10px auto 20px auto;
+  background-color: #075e54;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 8px 20px;
+}
+
+form[action="/chats/new"] button:hover {
+  background-color: #0b8c6f;
+}
